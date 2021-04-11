@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="top"
+    tools:context=".CustomToastActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/transparent">
+
+        <Button
+            android:id="@+id/buttonInfo"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="Info Message"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:background="@drawable/background_blue"
+            android:onClick="onClickInfoMessage">
+
+        </Button>
+
+        <Button
+            android:id="@+id/buttonSuccess"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="Success Message"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:background="@drawable/background_green"
+            android:onClick="onClickSuccessMessage">
+
+        </Button>
+
+        <Button
+            android:id="@+id/buttonError"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:text="Error Message"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:background="@drawable/background_red"
+            android:onClick="onClickErrorMessage">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    42B000
+    <color name="green">#FF7FF14A</color>
+    <color name="red">#FFF14040</color>
+    <color name="blue">#FF4AD5F1</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
