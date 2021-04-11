@@ -23,64 +23,34 @@ class CustomToastActivity : AppCompatActivity() {
         buttonError = findViewById(R.id.buttonError)
     }
 
-    fun showToastMessage(){
+    private fun showToastMessage(background : Int, icon : Int, message : String){
+        val layoutInflater : LayoutInflater = layoutInflater
+        val view : View = layoutInflater.inflate(R.layout.toast_message,findViewById(R.id.linearLayoutToast))
+        view.setBackgroundResource(background)
 
+        val imageViewToast : ImageView = view.findViewById(R.id.imageViewToast)
+        imageViewToast.setImageResource(icon)
+
+        val textViewToast : TextView = view.findViewById(R.id.textViewToast)
+        textViewToast.text = message
+
+        val toast : Toast = Toast(applicationContext)
+        toast.setGravity(Gravity.CENTER,0,0)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = view
+
+        toast.show()
     }
 
     fun onClickErrorMessage(view: View) {
-        val layoutInflater : LayoutInflater = layoutInflater
-        val view : View = layoutInflater.inflate(R.layout.toast_message,findViewById(R.id.linearLayoutToast))
-        //view.setBackgroundColor(R.drawable.background_red)
-
-        val imageViewToast : ImageView = view.findViewById(R.id.imageViewToast)
-        imageViewToast.setImageResource(R.drawable.error)
-
-        val textViewToast : TextView = view.findViewById(R.id.textViewToast)
-        textViewToast.text = "Hello!"
-
-        val toast : Toast = Toast(applicationContext)
-        toast.setGravity(Gravity.CENTER,0,0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = view
-
-        toast.show()
+        showToastMessage(R.drawable.background_red,R.drawable.error,"This is a Error Message!")
     }
 
     fun onClickSuccessMessage(view: View) {
-        val layoutInflater : LayoutInflater = layoutInflater
-        val view : View = layoutInflater.inflate(R.layout.toast_message,findViewById(R.id.linearLayoutToast))
-        //view.setBackgroundColor(R.drawable.background_green)
-
-        val imageViewToast : ImageView = view.findViewById(R.id.imageViewToast)
-        imageViewToast.setImageResource(R.drawable.success)
-
-        val textViewToast : TextView = view.findViewById(R.id.textViewToast)
-        textViewToast.text = "Hello!"
-
-        val toast : Toast = Toast(applicationContext)
-        toast.setGravity(Gravity.CENTER,0,0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = view
-
-        toast.show()
+        showToastMessage(R.drawable.background_green,R.drawable.success,"This is a Success Message!")
     }
 
     fun onClickInfoMessage(view: View) {
-        val layoutInflater : LayoutInflater = layoutInflater
-        val view : View = layoutInflater.inflate(R.layout.toast_message,findViewById(R.id.linearLayoutToast))
-        //view.setBackgroundColor(R.drawable.background_blue)
-
-        val imageViewToast : ImageView = view.findViewById(R.id.imageViewToast)
-        imageViewToast.setImageResource(R.drawable.info)
-
-        val textViewToast : TextView = view.findViewById(R.id.textViewToast)
-        textViewToast.text = "Hello!"
-
-        val toast : Toast = Toast(applicationContext)
-        toast.setGravity(Gravity.CENTER,0,0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = view
-
-        toast.show()
+        showToastMessage(R.drawable.background_blue,R.drawable.info,"This is a Info Message!")
     }
 }
