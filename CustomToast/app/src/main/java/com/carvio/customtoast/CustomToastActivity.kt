@@ -25,15 +25,20 @@ class CustomToastActivity : AppCompatActivity() {
 
     private fun showToastMessage(background : Int, icon : Int, message : String){
         val layoutInflater : LayoutInflater = layoutInflater
+
+        // Dynamic Background
         val view : View = layoutInflater.inflate(R.layout.toast_message,findViewById(R.id.linearLayoutToast))
         view.setBackgroundResource(background)
 
+        // Dynamic Icon
         val imageViewToast : ImageView = view.findViewById(R.id.imageViewToast)
         imageViewToast.setImageResource(icon)
 
+        // Dynamic Message
         val textViewToast : TextView = view.findViewById(R.id.textViewToast)
         textViewToast.text = message
 
+        // Set Position
         val toast : Toast = Toast(applicationContext)
         toast.setGravity(Gravity.CENTER,0,0)
         toast.duration = Toast.LENGTH_SHORT
