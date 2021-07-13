@@ -1,5 +1,6 @@
 # Custom Toast Messages
-Let's create a dynamic layout with backgorund, icon and message parameters.
+
+### Let's create a dynamic layout with backgorund, icon and message parameters.
 ```kotlin
 private fun showToastMessage(background : Int, icon : Int, message : String){
     val layoutInflater : LayoutInflater = layoutInflater
@@ -25,7 +26,8 @@ private fun showToastMessage(background : Int, icon : Int, message : String){
     toast.show()
 }
 ```
-To create a Custom Toast Message:
+
+### To create a Custom Toast Message:
 ```kotlin
 fun onClickErrorMessage(view: View) {
     showToastMessage(R.drawable.background_red,R.drawable.error,"This is a Error Message!")
