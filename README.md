@@ -1,6 +1,6 @@
-# Custom Toast Messages
+## Custom Toast Messages
 
-### Let's create a dynamic layout with backgorund, icon and message parameters.
+### Let's create a dynamic layout with backgorund, icon and message parameters:
 ```kotlin
 private fun showToastMessage(background : Int, icon : Int, message : String){
     val layoutInflater : LayoutInflater = layoutInflater
